@@ -28,7 +28,7 @@ export async function POST(request: Request) {
       },
     });
 
-    let info = await transporter.sendMail({
+    const info = await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: email,
       subject: subject,
